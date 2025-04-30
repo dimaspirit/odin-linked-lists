@@ -10,6 +10,18 @@ class LinkedList {
     this.head = node;
   }
 
+  get size() {
+    let point = this.head;
+    let count = 0;
+
+    while(point) {
+      count += 1;
+      point = point.next;
+    }
+
+    return count;
+  }
+
   toString() {
     let result = '';
     let point = this.head;
