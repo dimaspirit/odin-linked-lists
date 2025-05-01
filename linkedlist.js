@@ -26,7 +26,12 @@ class LinkedList {
 
   append(value) {
     const node = Node(value);
-    this.tail.next = node;
+
+    if(this.size === 0) {
+      this._head = node;
+    } else {
+      this.tail.next = node;
+    }
   }
 
   get size() {
