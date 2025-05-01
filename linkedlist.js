@@ -5,13 +5,8 @@ class LinkedList {
     this._head = null;
   }
 
-  prepend(value) {
-    const node = Node(value, this._head);
-    this._head = node;
-  }
-
   get head() {
-    return this._head.value;
+    return this._head;
   }
 
   get tail() {
@@ -21,7 +16,17 @@ class LinkedList {
       point = point.next;
     }
 
-    return point.value;
+    return point;
+  }
+
+  prepend(value) {
+    const node = Node(value, this._head);
+    this._head = node;
+  }
+
+  append(value) {
+    const node = Node(value);
+    this.tail.next = node;
   }
 
   get size() {
