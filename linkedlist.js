@@ -47,7 +47,6 @@ class LinkedList {
     let counter = 1;
 
     while(counter < size-1) {
-      console.log('counter', counter);
       pointer = pointer.next;
       counter = counter+1;
     }
@@ -67,6 +66,21 @@ class LinkedList {
     }
 
     return pointer;
+  }
+
+  contains(value) {
+    let isContains = false;
+    let pointer = this._head;
+
+    while(pointer.next && !isContains) {
+      if(pointer.value === value) {
+        isContains = true;
+      }
+
+      pointer = pointer.next;
+    }
+
+    return isContains;
   }
 
   toString() {
