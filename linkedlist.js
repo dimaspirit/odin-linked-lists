@@ -41,6 +41,21 @@ class LinkedList {
     return count;
   }
 
+  at(index) {
+    let pointer = this._head;
+    let counter = 0;
+    const size = this.size;
+
+    if(size < index) throw new Error(`The list contains ${size} elements, passed index is ${index}`);
+
+    while(counter !== index) {
+      pointer = pointer.next;
+      counter = counter+1;
+    }
+
+    return pointer;
+  }
+
   toString() {
     let result = '';
     let point = this._head;

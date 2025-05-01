@@ -9,3 +9,4 @@ console.log(list.toString());
 console.log(`Size of linked list is ${list.size}`);
 console.log(`Head of linked list is ${list.head.value}`);
 console.log(`Tail of linked list is ${list.tail.value}`);
+console.log(`Get node by index 1 ${list.at(1).value}`);
