@@ -41,6 +41,19 @@ class LinkedList {
     return count;
   }
 
+  pop() {
+    let pointer = this._head;
+    const size = this.size;
+    let counter = 1;
+
+    while(counter < size-1) {
+      console.log('counter', counter);
+      pointer = pointer.next;
+      counter = counter+1;
+    }
+    pointer.next = null;
+  }
+
   at(index) {
     let pointer = this._head;
     let counter = 0;
